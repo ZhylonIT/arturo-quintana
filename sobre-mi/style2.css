@@ -1,0 +1,249 @@
+/* Fuentes descargadas:
+font-family: "Cutive Mono", monospace;
+font-family: "Ubuntu Mono", monospace; */
+
+/* NORMALIZACION */
+*{
+    padding: o;
+    margin: 0;
+    box-sizing: border-box; /* Este mantiene el ancho y el alto a pesar del padding y margin */
+    font-family: "Ubuntu Mono", monospace;
+    list-style: none; /* Con esto se saca los puntos o numeros cuando hacemos listas */
+    text-decoration: none; /* Con esto se saca el subrayado en los enlaces */
+    color: white;
+}
+body {
+    background-color: black; /*Solo hasta terminar la pagina*/
+}
+header{
+    position: fixed; /*Con esto el header se queda fijo en la parte superior*/
+    right: 0;
+    top: 0;
+    z-index: 100; /*Esto hace que el header se muestre por encima*/
+    width: 100%;
+    display: flex;
+    align-items: center; /*Centra verticalmente*/
+    justify-content: space-between; /*Los elementos se separan*/
+    padding: 15px 50px; /*el primer numero es el padding vertical el segundo es el padding horizontal*/
+    background-color: transparent;
+}
+.logo{
+    font-family: "Roboto Mono", monospace;
+    font-size: 35px;
+    font-weight: 800; /*grueso de letras*/
+    text-transform: uppercase;
+    transform: translateX(-13%);
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    font-family: "Roboto Mono", monospace;
+    margin-left: 60px; /*Esto separa a los elementos de la barra*/
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 2px solid transparent;
+    transition: all .5s ease; /*Esto es para usar transiciones*/
+}
+.navlist a:hover{
+    border-bottom: 5px solid #806200; /*Cuando pasemos por el mouse encima, se hara el subrayado blanco*/
+}
+#menuicon{
+    display: block; /*display: none; queda en none para que solo se vea cuando la pagina colapsa*/
+    font-size: 35px;
+    z-index: 101; /*como el header es 100, este lo ponemos 101, asi aparece arriba del header*/
+    cursor: pointer; /*cambiar el mouse por una mano*/
+}    
+#menu-toggle{
+    display: none; /*este boton nunca se tiene que ver, es solo parte del truco para que el icono menu sea boton*/
+}
+.menu-icon-action{
+    display: none; /*para que no se puede hacer click*/
+}
+.hero{
+    height: 100%;   
+    width: 100%;
+    min-height: 100vh; /*el minimo tiene que ocupar el viewport height, que es la pantalla que se ve sin scrolear*/
+    background: linear-gradient(245.59deg, #1c1b1a 0%, #6c5e38 25%,#2c2c29 75%); /*el fondo va estar en degrade*/
+    position: relative; /*nos permite usar top, boton, left y right*/
+    display: grid; /*para poder dividir el hero en dos columnas*/
+    grid-template-columns: 1fr 1fr; /*cantidad de columnas*/
+    align-items: center;
+    gap: 2rem; /*espacio entre columnas*/
+}
+section{
+    padding: 0 8%; /*el primer numero es el vertical, el segundo el horizontal.*/
+}
+.herotext h5{
+    font-size: 18px;
+    font-weight: 400;
+}
+.herotext h1{
+    font-family: "Roboto Mono", monospace;
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+.herotext p{
+    font-size: 100%; /*80 por ciento del tamaño del contenedor padre, en este caso, es el herotext*/
+    margin-bottom: 30px;
+}
+.hero-img img{
+    width: 500px;
+    height: 600px;    
+    margin: auto;
+    height: auto;
+    transition: all 3s linear; /*la transicion va ser lineal*/
+}
+.hero-img img:hover{
+    width: 600px;
+    opacity: 0.8;
+}
+.herotext a{
+    display: inline-block; /*con el block podemos usar el ancho y alto*/
+    background-color: #5b5044;
+    border: 1px solid white;
+    padding: 15px 35px; /*el primer varlo es vertical y el segundo el horizontal*/
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 50px;
+    text-transform: uppercase; /*para hacer la palabra mayusucla*/
+    transition: all .5 ease;
+}
+.herotext a:hover{
+    background-color: transparent;
+    border: 1px solid #806200;
+    transform: translateX(6px); /*el translate x hace que el elemento se mueva en el eje horizontal*/
+}
+.herotext a.redes i{
+    vertical-align: middle;
+    margin-right: 5px;
+} 
+.icons{
+    display: block;
+    position: absolute;
+    top: 50vh;
+    padding: 0px 0px 0px 15px;
+    transform: translateY(-50%); /*con este podemos mover los iconos en el eje y, osea verticalmente.*/
+}
+.icons i{
+    display: block; /*con esto cada icono ocupa la totalida de la linea, por lo que se ponen en vertical*/      
+    font-size: 30px;
+    margin: 0px 0px 30px 0px;
+    transition: all 0.5s ease;
+}
+.icons i:hover{
+    color: #806200;
+    transform: translateY(-5px);
+}
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 3%;    
+}
+.scroll-down i{
+    display: block;
+    font-size: 50px;
+    transition: all 0.5s ease;
+}
+.scroll-down i:hover{
+    color: #806200;
+    transform: translateY(5px);
+}
+/* Vamos a hacer mediaquaries para hacer la web responsiva */
+@media (max-width:1050px){
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .icons{
+        display: none;
+    }
+    .herotext{
+        padding-top: 0;
+    }
+    .hero-img{
+        text-align: center;
+    }
+    .hero-img img{
+        width: 80%;
+        margin: 10% 0 0 10%;
+    }
+    .herotext h1{
+        font-size: 30px;
+    }
+    .herotext p{
+        font-size: 13px;
+    }
+    .herotext a{
+        font-size: 15px;
+    }
+    .herotext h5{
+        font-size: 20px;
+    }
+    .hero-img img:hover{
+        width: 420px;
+        opacity: 0.8;
+    }
+    .logo{
+        font-size: 25px;
+    }
+    .navlist a{
+        font-size: 13px;
+    }
+    .scroll-down i{
+        display: none;
+    }
+}
+@media (max-width: 850px){
+    .menu-icon-action{
+        display: block;
+        position: absolute;
+        left: 92%;
+        
+    }
+    #menu-icon{
+        display: block;
+    }
+    .herotext{
+        text-align: center;
+        padding-top: 100px;
+    }
+    .hero-img img{
+        margin: 0;
+    }
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        height: 180px;
+        background-color: #0f0c02d0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all .5s ease;
+    }
+    .navlist a{
+        display: block;
+        margin: 5px 0;
+        font-size: 15px;               
+    }
+    .navlist a:hover{
+        color: #806200;
+        border-bottom: 2px solid transparent;
+    }
+    #menu-toggle:checked + label.menu-icon-action + ul{
+        right: 0;
+    }
+    /*el icono de menu esta en imagen, pero es una caja, esta caja es un ckeckbox. cuando el checkbox esta activado, el menu action icon se activa.
+    la caja es menu checked, y la direccion es la class donde pusimos el menu-icon-action sumado todas las UL que pusimos dentro de esta class.*/
+}
