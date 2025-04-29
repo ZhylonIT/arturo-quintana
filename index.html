@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo de la Web -->
+    <title>Arturo Quintana Web</title>
+    <!-- Estilo que le vamos a dar a nuestra web con el archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos externos desde boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- iconos externos desde remixicos -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Fuente de la web importada desde googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+<!-- En el header, vamos a poner el logo y la barra de navegacion
+ El numero hace que no se actualize la pagina cuando la estoy armando     -->
+    <header>
+        <a href="#" class="logo">Arturo Quintana</a>
+        <!-- truco para que se pueda hacer click al boton en css -->
+        <input type="checkbox" name="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon-action"><div class='bx bx-menu' id="menuicon"></div></label>
+        <ul class="navlist">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre mi</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </header>
+    <!-- HERO SECTION (parte destacada de una web) -->
+     <section class="hero">
+    <div class="herotext">
+        <h5>Front and backend</h5>
+        <h1>Professional developer</h1>
+        <p>Desarrollador de paginas web, utilizando las herramientas de HTML, CSS y los lenguajes de programacion
+            JavaScript y ReactJS, ademas de diversas interfaces como UX/UI.
+        </p>
+        <a href="#">CV</a>
+        <a href="#" class="redes"><i class='bx bx-briefcase'></i>Portfolio</a>
+    </div>
+    <div class="hero-img">
+        <img src="/assets/img/arturo.PNG" alt="arturo-quintana-foto">
+    </div>
+
+    </section>
+    <div class="icons">
+        <a href="https://www.instagram.com/r2quinn/"><i class="ri-instagram-line"></i></a>
+        <a href="https://www.facebook.com/parazation"><i class="ri-facebook-circle-line"></i></a>
+        <a href="https://x.com/leideen"><i class="ri-twitter-x-line"></i></a>
+    </div>
+    <div class="scroll-down">
+        <a href="#"><i class="ri-arrow-down-circle-line"></i></a>
+    </div>
+    
+</body>
+</html>
